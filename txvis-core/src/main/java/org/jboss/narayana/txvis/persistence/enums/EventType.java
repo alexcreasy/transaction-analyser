@@ -19,5 +19,6 @@ public enum EventType {
     HEURISTIC_HAZARD,
     FINISH_OK,
     FINISH_ERROR,
+    TIMEDOUT,
     REPLAY_PHASE2;
 }

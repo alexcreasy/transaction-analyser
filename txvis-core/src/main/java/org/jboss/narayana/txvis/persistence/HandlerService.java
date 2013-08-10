@@ -143,6 +143,20 @@ public class HandlerService {
 
     }
 
+    public void txTimedOut(String txuid, Timestamp timestamp) {
+        em.getTransaction().begin();
+        setStatus(txuid, Status.TIMEDOUT, timestamp);
+        em.getTransaction().commit();
+    }
+
+
+    /**
+     *
+     * @param txuid
+     * @param nodeid
+     * @param actionStatus
+     * @param timestamp
+     */
     public void end(String txuid, String nodeid, String actionStatus, Timestamp timestamp) {
         em.getTransaction().begin();
         Transaction tx = findTransaction(this.nodeid, txuid);

@@ -23,7 +23,7 @@ public class RMRollbackPlugin implements Plugin {
      * Percentage threshold of transaction rollbacks caused by a resource manager at which
      * to report an issue.
      */
-    public static final int THRESHOLD = 5;
+    public static final float THRESHOLD = 5f;
 
     public static final int MIN_NUMBER = 3;
 
@@ -47,8 +47,8 @@ public class RMRollbackPlugin implements Plugin {
     public void findIssues() {
         Set<Issue> newIssues = new HashSet<>();
 
-        int totalTx = dao.findAllTopLevelTransactions().size();
-        int absoluteThreshold = totalTx / 100 * THRESHOLD;
+        double totalTx = (double) dao.findAllTopLevelTransactions().size();
+        double absoluteThreshold = totalTx / 100f * THRESHOLD;
 
         Collection<ResourceManager> rms = dao.findAllResourceManagers();
 

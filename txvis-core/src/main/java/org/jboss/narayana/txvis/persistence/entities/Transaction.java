@@ -172,6 +172,10 @@ public class Transaction implements Serializable {
                 e = new Event(this, EventType.ABORT, nodeid, timestamp);
                 setEndTime(timestamp);
                 break;
+            case TIMEDOUT:
+                e = new Event(this, EventType.TIMEDOUT, nodeid, timestamp);
+                setEndTime(timestamp);
+                break;
         }
         events.add(e);
     }

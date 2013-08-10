@@ -85,6 +85,7 @@ public class Issue implements Serializable {
             return false;
 
         final Issue i = (Issue) obj;
+
         return title.equals(i.title) && cause.equals(i.cause);
     }
 }

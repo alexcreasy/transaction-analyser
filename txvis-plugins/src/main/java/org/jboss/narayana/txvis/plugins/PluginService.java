@@ -58,16 +58,28 @@ public class PluginService implements Serializable {
     //@Schedule(minute = "*/2", hour = "*", persistent = true)
     public void scanForIssues() {
 
-        for (Plugin p : plugins)
-            p.findIssues();
+        for (Plugin p : plugins) {
+            try {
+                p.findIssues();
+            }
+            catch (Throwable t) {
+                logger.error("PluginService.scanForIssues - Plugin: " + p.getClass().getSimpleName() + " threw exception", t);
+            }
+        }
 
     }
 
     public Set<Issue> getIssues() {
         Set<Issue> issues = new HashSet<>();
 
-        for (Plugin p : plugins)
-            issues.addAll(p.getIssues());
+        for (Plugin p : plugins) {
+            try {
+                issues.addAll(p.getIssues());
+            }
+            catch (Throwable t) {
+                logger.error("PluginService.getIssues - Plugin: " + p.getClass().getSimpleName() + " threw exception", t);
+            }
+        }
 
         return issues;
     }

@@ -39,6 +39,7 @@ public final class Configuration {
             ArjunaTransactionImpleHandler.class,
             TxPrepareFailedHandler.class,
             TxFinalStatusHandler.class,
+            TimeoutHandler.class,
     };
 
     public static final Class[] LOG_FILTERS = new Class[] {
