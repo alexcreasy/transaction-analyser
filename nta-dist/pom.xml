@@ -43,7 +43,8 @@
     <dependencies>
         <dependency>
             <groupId>io.narayana.nta</groupId>
-            <artifactId>webapp</artifactId>
+            <artifactId>angularui</artifactId>
+            <version>${parent.version}</version>
             <type>war</type>
         </dependency>
         <dependency>
@@ -90,7 +91,7 @@
                     <modules>
                         <webModule>
                             <groupId>io.narayana.nta</groupId>
-                            <artifactId>webapp</artifactId>
+                            <artifactId>angularui</artifactId>
                             <contextRoot>/nta</contextRoot>
                         </webModule>
                     </modules>

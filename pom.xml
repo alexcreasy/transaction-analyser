@@ -59,7 +59,7 @@
             <modules>
                 <module>core</module>
                 <module>plugins</module>
-                <module>webapp</module>
+                <module>angularui</module>
                 <module>nta-dist</module>
                 <module>nta-remote-dist</module>
                 <module>demo</module>
@@ -72,7 +72,6 @@
             </activation>
             <modules>
                 <module>core</module>
-                <module>webapp</module>
                 <module>nta-dist</module>
             </modules>
         </profile>
@@ -81,7 +80,6 @@
             <modules>
                 <module>core</module>
                 <module>plugins</module>
-                <module>webapp</module>
                 <module>nta-dist</module>
                 <module>nta-remote-dist</module>
             </modules>
@@ -92,15 +90,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <version.maven.surefire>2.15</version.maven.surefire>
-
         <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
-
         <version.jboss.spec.javaee.6.0>3.0.2.Final</version.jboss.spec.javaee.6.0>
-
+        <version.wildfly.controller.client>8.0.0.Final</version.wildfly.controller.client>
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
-
         <version.junit>4.8.1</version.junit>
-
         <version.ear.plugin>2.6</version.ear.plugin>
         <version.ejb.plugin>2.3</version.ejb.plugin>
         <version.war.plugin>2.1.1</version.war.plugin>
