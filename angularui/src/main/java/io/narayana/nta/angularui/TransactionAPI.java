@@ -3,7 +3,8 @@ package io.narayana.nta.angularui;
 import io.narayana.nta.persistence.DataAccessObject;
 import io.narayana.nta.persistence.entities.Transaction;
 
-import javax.inject.Inject;
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -18,9 +19,10 @@ import java.util.Collection;
  * To change this template use File | Settings | File Templates.
  */
 @Path("/transaction")
+@Stateless
 public class TransactionAPI
 {
-    @Inject
+    @EJB
     DataAccessObject dao;
 
     @GET

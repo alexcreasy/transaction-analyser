@@ -1,8 +1,6 @@
 package io.narayana.nta.angularui;
 
-import io.narayana.nta.persistence.DataAccessObject;
-
-import javax.inject.Inject;
+import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -16,6 +14,7 @@ import javax.ws.rs.core.Response;
  * To change this template use File | Settings | File Templates.
  */
 @Path("/resourcemanager")
+@Stateless
 public class ResourceManagerAPI
 {
     @GET

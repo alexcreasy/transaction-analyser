@@ -35,9 +35,4 @@ public class Root extends Application
         HashSet<Class<?>> set = new HashSet<Class<?>>();
         return set;
     }
-
-    private void initializeCorsFilter()
-    {
-        //Need to find the dependency for CorsFilter;
-    }
 }
